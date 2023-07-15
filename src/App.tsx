@@ -9,7 +9,6 @@ function App() {
   const handleAddItem = (toDo: ToDo) => {
     if (toDo.isDone) {
       setDoneTasks([...doneTasks, toDo]);
-      // setDoneTasks((prev) => ({ ...prev, toDo }));
     } else {
       setPendingTasks([...pendingTasks, toDo]);
     }
