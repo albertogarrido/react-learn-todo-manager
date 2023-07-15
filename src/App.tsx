@@ -29,23 +29,7 @@ function App() {
 
       <ToDoContainer tasks={pendingTasks} />
 
-      {doneTasks.length > 0 && (
-        <div className="my-3 p-3 bg-body rounded shadow-sm">
-          <h6 className="border-bottom pb-2 mb-0">Tasks Completed</h6>
-
-          {doneTasks.map((todo, index) => (
-            <div
-              key={index}
-              className="d-flex text-body-secondary pt-3 border-bottom"
-            >
-              <p className="pb-3 mb-0 small lh-sm ">
-                <strong className="d-block text-gray-dark">{todo.title}</strong>
-                {todo.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      )}
+      {doneTasks.length > 0 && <ToDoContainer tasks={doneTasks} />}
     </main>
   );
 }
